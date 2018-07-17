@@ -1,0 +1,11 @@
+.btn-Alert {
+    background-color: red;
+    width: 200px;
+    height: 60px
+}
+
+.blockStyle {
+    background-color: lightgreen;
+    display: flex;
+    flex-flow: row wrap;
+}
