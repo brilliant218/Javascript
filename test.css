@@ -1,11 +1,17 @@
 .btn-Alert {
     background-color: red;
-    width: 200px;
-    height: 60px
+    width: 100px;
+    height: 30px
 }
 
 .blockStyle {
     background-color: lightgreen;
     display: flex;
     flex-flow: row wrap;
+}
+
+.Panel {
+    background-color: beige;
+    width: 900px;
+    height: 900px;
 }

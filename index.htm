@@ -11,9 +11,16 @@
 <body>
     <div class="blockStyle">
         <p>Test</p>
-        <button class="btn-Alert" onclick="alert('Welcome!')">Click Me!</button>
-        <button class="btn-Alert" onclick="ShowConfirmDialog()">Click Me again!</button>
+        <button class="btn-Alert" onclick="alert('Welcome!')">Click!</button>
+        <button class="btn-Alert" onclick="ShowConfirmDialog()">Click!</button>
+        <button class="btn-Alert" onclick="document.writeln('Hello World!')">Click!</button>
+        <button class="btn-Alert" onclick="Draw2D_Line()">Draw2D_Line</button>
+        <button class="btn-Alert" onclick="Draw2D_FillRect()">Draw2D_FillRect</button>
+        <button class="btn-Alert" onclick="Draw2D_StrokeRect()">Draw2D_StrokeRect</button>
+        <button class="btn-Alert" onclick="Draw2D_Star()">Draw2D_Star</button>
+        <button class="btn-Alert" onclick="Transform()">Transform</button>
         <textarea name="" id="msgText" cols="30" rows="10"></textarea>
+        <canvas id="drawPanel" class="Panel"></canvas>
     </div>
 
 </body>
