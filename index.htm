@@ -11,8 +11,9 @@
 <body>
     <div class="blockStyle">
         <p>Test</p>
-        <button class="btn-Alert" onclick="alert('Welcome!')">Click!</button>
-        <button class="btn-Alert" onclick="ShowConfirmDialog()">Click!</button>
+        <img id="pic" src="Image\apple.jpg" onmouseover="this.src='Image\\fruit.jpg'" onmouseout="this.src='Image\\apple.jpg'" width="200px" height="200px" />
+        <button id="btn" class="btn-Alert" onclick="alert('Welcome!')" onmouseover="mouseover" onmouseout="mouseout">Click!</button>
+        <button id="btn2" class="btn-Alert" onclick="ShowConfirmDialog()">Click!</button>
         <button class="btn-Alert" onclick="document.writeln('Hello World!')">Click!</button>
         <button class="btn-Alert" onclick="Draw2D_Line()">Draw2D_Line</button>
         <button class="btn-Alert" onclick="Draw2D_FillRect()">Draw2D_FillRect</button>

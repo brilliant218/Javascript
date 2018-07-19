@@ -78,3 +78,13 @@ function Transform() {
     context.restore();
 
 }
+
+function mouseover() {
+    var button = document.getElementById("btn");
+    btn.backgroundColor = "#ff0000";
+}
+
+function mouseout() {
+    var button = document.getElementById("btn");
+    btn.backgroundColor = "#00ff00";
+}
