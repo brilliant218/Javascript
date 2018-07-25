@@ -4,7 +4,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="test.css" rel="stylesheet" type="text/css">
-    <script src="test.js"></script>
+    <script src="test.js">
+        window.onload = function() {
+            var support = document.getElementById("support");
+            if (window.File && window.FileReader && window.FileList) {
+
+                support.innerHTML = "support file operation";
+            } else {
+                support.innerHTML = "not support";
+            }
+        }
+    </script>
     <title>Hello World!</title>
 </head>
 
@@ -22,6 +32,10 @@
         <button class="btn-Alert" onclick="Transform()">Transform</button>
         <textarea name="" id="msgText" cols="30" rows="10"></textarea>
         <canvas id="drawPanel" class="Panel"></canvas>
+        <div>
+            <p id="support">拖动文件到这里</p>
+            <p id="fileArea" class="fileBlock" ondropover="dropOver" ondrop="drop" />
+        </div>
     </div>
 
 </body>

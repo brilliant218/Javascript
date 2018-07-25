@@ -88,3 +88,16 @@ function mouseout() {
     var button = document.getElementById("btn");
     btn.backgroundColor = "#00ff00";
 }
+
+function dropOver(ev) {
+    ev.preventDefault();
+}
+
+function drop(ev) {
+    var fileList = ev.dataTransfer.FileList;
+    for (var i = 0; i < fileList.Length; i++) {
+        var node = document.createElement("p");
+        node.text = fileList[i].Name;
+        ev.target.appendChild(node);
+    }
+}
