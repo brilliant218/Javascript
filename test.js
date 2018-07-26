@@ -79,14 +79,24 @@ function Transform() {
 
 }
 
-function mouseover() {
+function mouseover(ev) {
     var button = document.getElementById("btn");
-    btn.backgroundColor = "#ff0000";
+    btn.style.backgroundColor = "#ff0000";
 }
 
-function mouseout() {
+function mouseout(ev) {
     var button = document.getElementById("btn");
-    btn.backgroundColor = "#00ff00";
+    btn.style.backgroundColor = "#00ff00";
+}
+
+function load() {
+    var support = document.getElementById("support");
+    if (window.File && window.FileReader && window.FileList) {
+
+        support.innerHTML = "support file operation";
+    } else {
+        support.innerHTML = "not support";
+    }
 }
 
 function dropOver(ev) {

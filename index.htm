@@ -5,24 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="test.css" rel="stylesheet" type="text/css">
     <script src="test.js">
-        window.onload = function() {
-            var support = document.getElementById("support");
-            if (window.File && window.FileReader && window.FileList) {
-
-                support.innerHTML = "support file operation";
-            } else {
-                support.innerHTML = "not support";
-            }
-        }
     </script>
     <title>Hello World!</title>
 </head>
 
 <body>
-    <div class="blockStyle">
+    <div class="blockStyle" onload="load()">
         <p>Test</p>
         <img id="pic" src="Image\apple.jpg" onmouseover="this.src='Image\\fruit.jpg'" onmouseout="this.src='Image\\apple.jpg'" width="200px" height="200px" />
-        <button id="btn" class="btn-Alert" onclick="alert('Welcome!')" onmouseover="mouseover" onmouseout="mouseout">Click!</button>
+        <button id="btn" onclick="alert('Welcome!')" onmouseover="mouseover(event)" onmouseout="mouseout(event)">Click!</button>
         <button id="btn2" class="btn-Alert" onclick="ShowConfirmDialog()">Click!</button>
         <button class="btn-Alert" onclick="document.writeln('Hello World!')">Click!</button>
         <button class="btn-Alert" onclick="Draw2D_Line()">Draw2D_Line</button>
