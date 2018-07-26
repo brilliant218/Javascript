@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skin change</title>
+    //任何节点都可以设置id
+    <link id="skinDefine" href="DefaultSkin.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        function changeSkin() {
+            skinDefine.href = 'LightOffSkin.css'
+        }
+    </script>
+</head>
+
+<body>
+    <div class="Div">练习</div>
+    <button class="Button" onclick="changeSkin()">夜间模式</button>
+</body>
+
+</html>
