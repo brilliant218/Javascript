@@ -1,0 +1,25 @@
+.buttonStyle {
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    margin: 20px
+}
+
+.checkBoxStyle {
+    background-color: red;
+    color: green;
+    margin: 20px
+}
+
+.blockStyle {
+    background-color: lightgreen;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px
+}
+
+.imageStyle {
+    width: 100px;
+    height: 100px;
+    margin: 20px
+}
