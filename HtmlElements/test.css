@@ -14,7 +14,7 @@
 .blockStyle {
     background-color: lightgreen;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     margin: 20px
 }
 

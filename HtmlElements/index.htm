@@ -4,6 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="test.css" rel="stylesheet" type="text/css">
+    <!--     <base> 标签描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接 -->
+    <base href="http://www.baidu.com" target="_blank">
     <script src="test.js">
     </script>
     <title>Html Elements</title>
@@ -19,7 +21,41 @@
         <b>粗体字</b>
     </p>
     <button class="buttonStyle"></button>
+    <!--inline style -->
+    <button style="width:100px;height:30px;background-color:lightblue"></button>
+    <!--inline style and class, inline style has high priority-->
+    <button class="buttonStyle" style="width:100px;height:30px;background-color:lightblue"></button>
+
     <input type="checkbox" id="chkBox" class="checkBoxStyle" value="Win10">
+    <!--Note:below properties are valid for most of elements -->
+    <!--     property contenteditable - true/false -->
+    <p contenteditable="true">
+        <b>可以编辑的内容</b>
+    </p>
+    <!--     property translate - yes/no -->
+    <p translate="yes">
+        <b>Readme</b>
+    </p>
+    <!--     property lang - specify language -->
+    <p lang="fr">
+        <b>content in fr language</b>
+    </p>
+    <img src="test.jpg" alt="this is a image">
+
+    <a href="http://www.baid.com">百度</a>
+    <!--     target的所有取值以及它们的含义：
+
+            _blank：在新窗口中打开；
+
+            _self：默认。在相同的框架中打开；
+
+            _parent：在父框架集中打开；
+
+            _top：在整个窗口中打开； -->
+    <a href="http://www.sohu.com" target="_blank">搜狐</a>
+    <a href="http://www.sina.com" target="_top">新浪</a>
+    <a href="#chkBox">跳转到id</a>
+    <a href="#">空链接(鼠标移上有变化，无法点击)</a>
 </div>
 
 <body>
