@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*-----------------------响应式布局-------------------------- */
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        .row:after {
+            clear: both;
+            display: block;
+        }
+        /* 选取所有包含col-的class(class^是所有以col-开头的，class$是所有以col-结尾的) */
+        
+        [class*='col-'] {
+            padding: 15px;
+            float: left;
+            border: 1px solid red;
+        }
+        
+        .col-1 {
+            width: 8.33%;
+        }
+        
+        .col-2 {
+            width: 16.66%;
+        }
+        
+        .col-3 {
+            width: 25%;
+        }
+        
+        .col-4 {
+            width: 33.33%;
+        }
+        
+        .col-5 {
+            width: 41.66%;
+        }
+        
+        .col-6 {
+            width: 50%;
+        }
+        
+        .col-7 {
+            width: 58.33%;
+        }
+        
+        .col-8 {
+            width: 66.66%;
+        }
+        
+        .col-9 {
+            width: 75%;
+        }
+        
+        .col-10 {
+            width: 83.33%;
+        }
+        
+        .col-11 {
+            width: 91.66%;
+        }
+        
+        .col-12 {
+            width: 100%;
+        }
+        /*-----------------------响应式布局-------------------------- */
+        
+        .header {
+            background-color: yellow;
+            padding: 10px;
+        }
+        
+        .menu {
+            background-color: lightblue;
+        }
+        
+        .menuitem {
+            color: red;
+            width: auto;
+        }
+        
+        .NoIconList {
+            list-style: none;
+        }
+        
+        .footer {
+            background-color: pink;
+            clear: both;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>今日头条</h2>
+    </div>
+    <div class="row">
+        <div class="menu col-3">
+            <ul class="NoIconList" title="Companions">
+                <li class="menuitem">Baidu</li>
+                <li class="menuitem">Sohu</li>
+                <li class="menuitem">Sina</li>
+                <li class="menuitem">Lenovo</li>
+            </ul>
+        </div>
+        <div class="content col-9">
+        </div>
+    </div>
+    <div class="footer row">
+        Copyright &circledR;Lenovo 2018
+    </div>
+</body>
+
+</html>
