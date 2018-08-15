@@ -1,0 +1,36 @@
+.blockStyle {
+    background-color: lightgreen;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.imageStyle {
+    width: 100px;
+    height: 100px;
+}
+
+.defaultbutton {
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+}
+
+.roundcornerbutton {
+    border-radius: 10px;
+}
+
+.abnormalroundcornerbutton {
+    border-radius: 10px 20px 30px 40px;
+}
+
+.borderbutton {
+    border: 2px solid blue;
+}
+
+.shadowbutton {
+    box-shadow: 3px 3px 5px red;
+}
+
+.colorbutton {
+    background-color: green;
+}
