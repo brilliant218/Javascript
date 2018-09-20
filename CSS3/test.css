@@ -34,3 +34,27 @@
 .colorbutton {
     background-color: green;
 }
+
+.defaultdiv {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+}
+
+.lineargradientdiv {
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple);
+}
+
+.lineargradientdivrepeatly {
+    background: repeating-linear-gradient(to right, red, green 33%, blue 33%)
+}
+
+.lineargradientdivradical {
+    background: radial-gradient(red, green 25%, blue 50%);
+}
+
+.lineargradientdivopatical {
+    background: radial-gradient( rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.3), rgba(0, 0, 255, 0.5));
+}
