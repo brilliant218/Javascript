@@ -50,7 +50,8 @@ setInterval((data)=>{
     eventEmitter.emit('interval-event', data);
 }, 1000, 'get interval event');
 
-
+//'error' is specail event, no need to call on() before
+eventEmitter.emit('error');
 
 
 
