@@ -1,3 +1,4 @@
+//如果通过VSCode调试NodeJS, //js文件所在的文件夹中没有生成launch.json的话，需要先右键点击文件夹以vscode打开，并且生成launch.json的话，需要先右//键点击文件夹以vscode打开，并且生成launch
 var events = require("events");
 var eventEmitter = new events.EventEmitter();
 
