@@ -48,7 +48,7 @@
         var ve = new Vue({
             el: '#app',
             data: {
-                articles: jsonData
+                articles: ""
             }
         })
 
@@ -59,11 +59,22 @@
                     var responseText = xhr.responseText;
                     // $("#jsonContent").val(responseText);
                     //showJson(responseText);
-                    ve.data.articles = JSON.parse(responseText).articles;
+                    ve.articles = new Array;
+                    var newsData = JSON.parse(responseText).articles;
+                    newsData.forEach(element => {
+                        ve.articles.push({
+                            title: element.title,
+                            url: element.url
+                        });
+                    });
                 }
             };
             xhr.open("GET", "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3af3574e97ab42f89a028e3fb09003d1", true);
             xhr.send(null);
+        }
+
+        function connectService() {
+
         }
 
         function showJson(data) {
@@ -82,19 +93,24 @@
     <table>
         <tr>
             <td class="tdLeft" nowrap>
-                <button onclick="getNews()">点击获取新闻</button>
+                <button onclick="getNews()">Get daily news</button>
+                <div id="app">
+                    <ol>
+                        <news-item v-for="item in articles" v-bind:todo="item">
+                        </news-item>
+                    </ol>
+                    <div id="container">
+                    </div>
+                </div>
             </td>
-            <!--<td class="tdRight"><textarea id="jsonContent"></textarea></td>-->
+            <td class="tdRight">
+                <div>
+                    <button onclick="connectService()">Connect to service</button>
+                    <textarea id="jsonContent"></textarea>
+                </div>
+            </td>
         </tr>
     </table>
-    <div id="app">
-        <ol>
-            <news-item v-for="item in articles" v-bind:todo="item">
-            </news-item>
-        </ol>
-        <div id="container">
-        </div>
-    </div>
 </body>
 
 </html>
