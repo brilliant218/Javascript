@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Json网页格式化展示</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <link type="text/css" href="css/jsonFormater.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jsonFormater.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "微软雅黑";
+            font-size: 12px;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        table .tdLeft {
+            width: 150px;
+            text-align: right;
+            line-height: 30px;
+        }
+        
+        table .tdRight {
+            width: 400px;
+        }
+        
+        table textarea {
+            width: 400px;
+            height: 100px;
+        }
+        
+        #container {
+            margin-left: 150px;
+        }
+    </style>
+    <script>
+        var jsonData;
+        Vue.component('news-item', {
+            props: ['article'],
+            template: '<div>><li>{{ article.url }}</li><li>{{ article.title }}</li></div>'
+        })
+        var ve = new Vue({
+            el: '#app',
+            data: {
+                articles: jsonData
+            }
+        })
+
+        function getNews() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var responseText = xhr.responseText;
+                    // $("#jsonContent").val(responseText);
+                    //showJson(responseText);
+                    ve.data.articles = JSON.parse(responseText).articles;
+                }
+            };
+            xhr.open("GET", "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3af3574e97ab42f89a028e3fb09003d1", true);
+            xhr.send(null);
+        }
+
+        function showJson(data) {
+            $('table #container').css('display', 'block');
+            var options = {
+                dom: '#container' //对应容器的css选择器
+            };
+            var jf = new JsonFormater(options); //创建对象
+            //jf.doFormat($("#jsonContent").val()); //格式化json 
+            jf.doFormat(data);
+        };
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="tdLeft" nowrap>
+                <button onclick="getNews()">点击获取新闻</button>
+            </td>
+            <!--<td class="tdRight"><textarea id="jsonContent"></textarea></td>-->
+        </tr>
+    </table>
+    <div id="app">
+        <ol>
+            <news-item v-for="item in articles" v-bind:todo="item">
+            </news-item>
+        </ol>
+        <div id="container">
+        </div>
+    </div>
+</body>
+
+</html>
