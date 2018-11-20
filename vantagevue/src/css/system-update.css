@@ -1,0 +1,96 @@
+.content-view {
+  padding: 0 40px 40px;
+}
+.fz-12{
+  font-size: 12px;
+}
+.su-title {
+  font-family: 'Crimson-Roman';
+  font-size: 24px;
+}
+
+.su-box {
+  display: none;
+  color: #333333;
+}
+
+.su-box.show {
+  display: block;
+}
+
+.su-contain {
+  width: 100%;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.su-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.su-buttons span {
+  margin-right: 20px;
+}
+
+.btn-normal {
+  margin: 0 20px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 25px;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-normal:hover,
+.btn-normal:active {
+  opacity: .9;
+}
+
+.btn-normal:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .25);
+  box-shadow: 0 0 0 2px rgba(2, 117, 216, .25);
+}
+
+.su-search-result-buttons{
+  justify-content: flex-end;
+}
+
+.progress {
+  height: 16px;
+  line-height: 14px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: solid 1px #cccccc;
+}
+
+.nav {
+  border-bottom: 1px solid #eee;
+  list-style: none !important;
+}
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link {
+  font-family: "Segoe UI Semibold";
+  color: #666666;
+  background-color: none;
+  border-radius: 0;
+}
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+  color: #cf232c;
+  background-color: #fff;
+  border-bottom: 2px solid #cf232c;
+}
+
+.tab-content > .active {
+  color: #333333;
+  font-size: 14px;
+}
+
+.tab-content > .active p {
+  color: #666666;
+}
